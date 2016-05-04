@@ -1,5 +1,7 @@
-# cookiecutter-ds-project
-Data-Science-project contains some boilerplate you need to create a ready to deploy (on AWS) artificial inteligence project.
+# Cookiecutter-ds-project
+Cookiecutter-ds-project is a cookiecutter template that contains some boilerplate you need to create a ready to deploy (on AWS) artificial inteligence project.
+
+Warning: This template is not ready to use yet. At this moment this template only configures a local virtualenv and commit some files to github.
 
 # What this template do for you
 
@@ -21,7 +23,7 @@ Data-Science-project contains some boilerplate you need to create a ready to dep
     ```
     - Start coding :)
 
-# How to use
+# Some usefull scritpts
 
     - Use deploy/local/configure_local_dev_env.sh to initialize your local env.
     
