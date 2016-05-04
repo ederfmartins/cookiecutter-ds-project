@@ -1,0 +1,8 @@
+{
+    "repo_name": "replace with the name for the git repo",
+    "repo_url": "https://github.com/ederfmartins/cookiecutter-ds-project.git",
+    "source": "replace with the name off your source code root",
+    "python_version": "2.7",
+    "project_short_description": "Data-Science-project contains some boilerplate you need to create a ready to deploy (on AWS) artificial inteligence project.",
+    "author": "ederfmartins"
+}

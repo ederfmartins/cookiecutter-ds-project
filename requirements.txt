@@ -1,0 +1,8 @@
+cookiecutter
+virtualenvwrapper
+wercker
+
+# for use werker api
+pyopenssl
+ndg-httpsclient
+pyasn1

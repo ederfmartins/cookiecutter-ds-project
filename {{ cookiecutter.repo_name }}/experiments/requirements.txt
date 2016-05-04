@@ -1,0 +1,9 @@
+ipython==2.3.1
+ipython[notebook]
+ipdb==0.8.1
+click==5.1
+numpy==1.9.2
+scipy==0.16.0
+pandas==0.16.2
+matplotlib
+ansible
