@@ -27,3 +27,11 @@ rabbit:
        - "15672:15672"
     # 1Gb
     mem_limit: 1000000000
+
+jupyter:
+    image: jupyter/scipy-notebook
+    command: start-notebook.sh --NotebookApp.base_url=../../experiments/notebooks
+    ports:
+       - "8888:8888"
+    # 1Gb
+    mem_limit: 1000000000
