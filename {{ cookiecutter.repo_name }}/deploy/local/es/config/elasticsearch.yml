@@ -1,0 +1,70 @@
+##################### Elasticsearch Configuration Example #####################
+# <http://elasticsearch.org/guide/en/elasticsearch/reference/current/setup-configuration.html>
+
+
+################################### Cluster ###################################
+cluster.name: cvrecdocker
+
+#################################### Node #####################################
+
+node.local: true #disable network
+
+#################################### Paths ####################################
+
+path.data: /usr/share/elasticsearch/data
+
+path.logs: /var/log/elasticsearch
+
+############################## Network And HTTP ###############################
+
+# Elasticsearch, by default, binds itself to the 0.0.0.0 address, and listens
+# on port [9200-9300] for HTTP traffic and on port [9300-9400] for node-to-node
+# communication. (the range means that if the port is busy, it will automatically
+# try the next port).
+
+network.host: 0.0.0.0
+
+################################## Discovery ##################################
+
+# For more information, see
+# <http://elasticsearch.org/guide/en/elasticsearch/reference/current/modules-discovery-zen.html>
+
+# Unicast discovery allows to explicitly control which nodes will be used
+# to discover the cluster. It can be used when multicast is not present,
+# or to restrict the cluster communication-wise.
+#
+# 1. Disable multicast discovery (enabled by default):
+#
+discovery.zen.ping.multicast.enabled: false
+
+################################## Security ################################
+
+# Uncomment if you want to enable JSONP as a valid return transport on the
+# http server. With this enabled, it may pose a security risk, so disabling
+# it unless you need it is recommended (it is disabled by default).
+#
+#http.jsonp.enable: true
+
+script.inline: on
+script.indexed: on
+
+
+############################### Thread Pools ###############################
+
+threadpool:
+    index:
+        type: fixed     # holds a fixed size of threads
+        queue_size: -1  # size of pending requests that have no threads to execute (-1 to infinite)
+    bulk:
+        type: fixed
+        queue_size: -1
+
+############################ Elasticsearch core ############################
+
+indices.cluster:
+    send_refresh_mapping: false  # disable sending a refresh-mapping to master node
+
+
+# Allow the use of http://www.gridshore.nl/esgui/#/dashboard
+
+http.cors.enabled: true

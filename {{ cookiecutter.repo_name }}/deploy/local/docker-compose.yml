@@ -1,0 +1,29 @@
+redis:
+    image: redis
+    volumes:
+        - ./redisdata:/data
+    command: redis-server --appendonly yes
+    ports:
+        - "6379:6379"
+    # 1Gb
+    mem_limit: 1000000000
+
+elastic:
+    image: catholabs/elastic-with-marvel:2.2
+    command: elasticsearch
+    volumes:
+       - ./es/data:/usr/share/elasticsearch/data
+       - ./es/config:/usr/share/elasticsearch/config
+       - ./es/logs:/var/log/elasticsearch
+    ports:
+       - "9200:9200"
+    # 1Gb
+    mem_limit: 1000000000
+
+rabbit:
+    image: rabbitmq:3-management
+    ports:
+       - "5672:5672"
+       - "15672:15672"
+    # 1Gb
+    mem_limit: 1000000000
